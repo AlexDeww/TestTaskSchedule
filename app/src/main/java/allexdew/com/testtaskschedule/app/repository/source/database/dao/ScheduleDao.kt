@@ -13,11 +13,11 @@ abstract class ScheduleDao {
     @Transaction
     open fun updateAll(newList: List<ScheduleItem>) {
         deleteAll()
-        insertAll(newList)
+        newList.forEach { it.id = insert(it) }
     }
 
     @Insert
-    abstract fun insertAll(newList: List<ScheduleItem>)
+    abstract fun insert(item: ScheduleItem): Long
 
     @Query("DELETE FROM schedule")
     abstract fun deleteAll()
