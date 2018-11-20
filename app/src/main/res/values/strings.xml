@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TestTaskSchedule</string>
+    <string name="schedule_data">Name: %s\nStart Time: %s\nEnd Time: %s\nTeacher: %s\nPlace: %s\nDescription: %s\nWeek Day: %s</string>
+</resources>
